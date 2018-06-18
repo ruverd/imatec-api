@@ -150,6 +150,11 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Passport\PassportServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        OwenIt\Auditing\AuditingServiceProvider::class,
+        Silber\Bouncer\BouncerServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -159,7 +164,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
     ],
 
     /*
@@ -208,7 +212,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Bouncer' => Silber\Bouncer\BouncerFacade::class,
     ],
 
 ];
